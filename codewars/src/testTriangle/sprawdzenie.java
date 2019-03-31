@@ -1,5 +1,7 @@
 package testTriangle;
 
+import java.util.Formatter;
+
 /**
  * Created by Robert Burek
  */
@@ -37,6 +39,19 @@ public class sprawdzenie {
 
         return licznik;
     }
+    static double suma = 1.00;
+
+    public static String seriesSum(int n) {
+        // Happy Coding ^_^
+        float suma = 1.00f;
+        int j=1;
+        if (n > 0) {
+            for (int i = 1; i < n ; i++) {
+                suma += 1.00f/(j+=3);
+            }
+        } else suma = 0.00f;
+        return String.valueOf(suma);
+    }
 
     public static String even_or_odd(int number) {
         //Place code here
@@ -46,7 +61,11 @@ public class sprawdzenie {
 
     public static void main (String[] args){
 
-        System.out.println(" ");
+            double a= 5.567877;
+
+        System.out.println(seriesSum(40));
+        System.out.println(seriesSum(0));
+
 
 
     }
