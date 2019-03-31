@@ -19,16 +19,34 @@ public class sprawdzenie {
         return triangle;
     }
 
-    static String noSpace(final String x) {
-        return x.replace(" ","");
+    public int countSheeps(Boolean[] arrayOfSheeps) {
+        // TODO May the force be with you
+        int licznik = 0;
+        boolean[] array1 = {true,  true,  true,  false,
+                true,  true,  true,  true ,
+                true,  false, true,  false,
+                true,  false, true, true ,
+                true,  true,  true,  true ,
+                false, false, true,  true };
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i]) ++licznik;
+            if (arrayOfSheeps[i] != null) {
+
+            }
+        }
+
+        return licznik;
     }
 
-    public static void main (String[] args){
-        if (isTriangle(7, 2, 2)) {
-            System.out.println("To jest trójkąt.");
-        } else System.out.println("Nie jast to trójkąt!!!");
+    public static String even_or_odd(int number) {
+        //Place code here
+        return (number % 2 == 0)? "Even":"Odd";
+    }
 
-        System.out.println(noSpace("erer e re r rerer trt yt y tuy ty"));
+
+    public static void main (String[] args){
+
+        System.out.println(" ");
 
 
     }
