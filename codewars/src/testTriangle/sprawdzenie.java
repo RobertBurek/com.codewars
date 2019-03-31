@@ -1,6 +1,6 @@
 package testTriangle;
 
-import java.util.Formatter;
+import java.util.*;
 
 /**
  * Created by Robert Burek
@@ -58,10 +58,37 @@ public class sprawdzenie {
         return (number % 2 == 0)? "Even":"Odd";
     }
 
+    public static String printerError(String s) {
+        String nowy = s.replaceAll("[a-m]", "");
+        int ile = 0;
+        ile= nowy.length() - ile;
+        System.out.println(ile+ "    "+ nowy);
+        return (String) String.format(ile + "/" + s.length());
+    }
+
+
+
+    public static int ConvertBinaryArrayToInt(List<Integer> binary) {
+        // Your Code
+        int wynik = 0;
+        for (int i = 0; i< binary.size(); ++i) {
+            wynik += Math.pow(2, (binary.size() -1 - i)) * binary.get(i);
+            System.out.println(i +"  " + (binary.size()-1-i) +"   " + wynik);
+        }
+        return wynik;
+}
 
     public static void main (String[] args){
 
+    //    System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
+        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(1,1,1,1))));
+
+
+
+
             double a= 5.567877;
+        String s="aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+        System.out.println(printerError(s));
 
         System.out.println(seriesSum(40));
         System.out.println(seriesSum(0));
